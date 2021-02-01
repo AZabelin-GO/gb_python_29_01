@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 
+"""
+Пользователь вводит целое положительное число. Найдите самую большую цифру в числе.
+Для решения используйте цикл while и арифметические операции.
+"""
+
+
 def main():
     var = int(input('Enter a number:\n'))
     max = var % 10
@@ -12,6 +18,7 @@ def main():
     max = max if max > var else var
 
     print(f'Maximum digit: {max}')
+
 
 # Alternative way
 # def main():
