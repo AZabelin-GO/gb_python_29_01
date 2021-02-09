@@ -25,8 +25,8 @@ array = [
 
 
 def main():
-    for var in array:
-        print(f"Element: {var}; Element_type: {type(var)}")
+    for k, v in enumerate(array, 1):
+        print(f"{k}) Element: {v}; Element_type: {type(v)}")
 
 
 if __name__ == '__main__':

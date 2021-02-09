@@ -12,8 +12,8 @@ def read_array():
 
 
 def print_string_array(array):
-    for str in array:
-        print(f"{str:.10}")
+    for k, v in enumerate(array, 1):
+        print(f"{k}) {v:.10}")
 
 
 def main():
