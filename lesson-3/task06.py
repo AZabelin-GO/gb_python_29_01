@@ -14,7 +14,13 @@ def int_func(word):
 
 
 def read_input():
-    return input("Enter a word or string:\n")
+    english_chars = set("abcdefghijklmnopqrstuvwxyz")
+    s = input("Enter a word or string:\n").lower()
+    if set(s.replace(" ", "")).issubset(english_chars):
+        return s
+    else:
+        print(f"Input contains non english characters: {set(s.replace(' ', '')) - english_chars}")
+        exit(1)
 
 
 def main():
