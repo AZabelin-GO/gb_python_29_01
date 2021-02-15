@@ -1,0 +1,7 @@
+Zabelin,100000
+Smith,10000
+Snow,17000
+Hitler,150000
+Stalin,75000
+Chan,100000
+Lee,15000
