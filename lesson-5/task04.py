@@ -24,7 +24,7 @@ ENG_RUS_VOCABULARY = {
 
 def translate_into_russian(s):
     for k, v in ENG_RUS_VOCABULARY.items():
-        s.replace(k, v)
+        s = s.replace(k, v)
     return s
 
 
@@ -32,7 +32,8 @@ def main():
     try:
         with open(TEXT_FILE, "r") as in_file, open(NEW_FILE, "w") as out_file:
             for line in in_file:
-                print(translate_into_russian(line.strip()), file=out_file)
+                s = translate_into_russian(line.strip())
+                print(s, file=out_file)
     except FileNotFoundError:
         print(f"File '{TEXT_FILE}' not found")
         exit(1)
