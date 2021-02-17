@@ -65,9 +65,9 @@ def read_file(file_name):
 
 def calculate_statistic(data):
     avg_profit = 0
-    statistic = []
+    statistic = [{}]
     for x in data:
-        statistic.append({
+        statistic[0].update({
             x['Company name']: x['Profit']
         })
         if x["Profit"] > 0:
@@ -96,7 +96,7 @@ def save_statistic(file_name, statistic):
 
 
 def main():
-    # init_file(TEXT_FILE)
+    init_file(TEXT_FILE)
     data = read_file(TEXT_FILE)
     statistic = calculate_statistic(data)
     print_statistic(statistic)
